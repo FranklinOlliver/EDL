@@ -1,4 +1,4 @@
-package HeapComFilaDePrioridade;
+package HeapComFilaDePrioridade-Array;
 
 import java.util.ArrayList;
 import java.util.NoSuchElementException;

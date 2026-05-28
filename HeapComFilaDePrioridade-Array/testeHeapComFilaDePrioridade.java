@@ -1,4 +1,4 @@
-package HeapComFilaDePrioridade;
+package HeapComFilaDePrioridade-Array;
 
 public class testeHeapComFilaDePrioridade {
     public static void main(String[] args) {
