@@ -1,3 +1,5 @@
+package Pilha;
+
 public class PilhaArray {
     // atributos e construtor
     private int capacidade;
