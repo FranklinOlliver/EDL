@@ -1,0 +1,41 @@
+Exercícios de Estrutura de Dados - Fila e Deque
+
+1. Descreva o estado da fila (inicialmente vazia) após cada uma das operações a seguir: (R-4.2) 
+enqueue(5), enqueue(3), dequeue(), enqueue(2), enqueue(8), dequeue(), dequeue(), enqueue(9), enqueue(1), dequeue(), enqueue(7), enqueue(6), dequeue(), dequeue(), enqueue(4), enqueue (7), dequeue().
+
+---------- RESPOSTA: ----------
+enqueue  [5]
+enqueue  [5, 3]
+dequeue  [3]
+enqueue  [3, 2]
+enqueue  [3, 2, 8]
+dequeue  [2, 8]
+dequeue  [8]
+enqueue  [8, 9]
+enqueue  [8, 9, 1]
+dequeue  [9, 1]
+enqueue  [9, 1, 7]
+enqueue  [9, 1, 7, 6]
+dequeue  [1, 7, 6]
+dequeue  [7, 6]
+enqueue  [7, 6, 4]
+enqueue  [7, 6, 4, 7]
+dequeue  [6, 4, 7] 
+
+
+9. Descreva o estado do deque (inicialmente vazio) após cada uma das seguintes operações: 
+insertFirst(3), insertLast(8), insertLast(9), insertFirst(5), removeFirst(), removeLast(), first(), insertLast(7), removeFirst(), last(), removeLast(). (R.43)
+
+----------- RESPOSTA: -----------
+insertFirst  [3]
+insertLast   [3, 8]
+insertLast   [3, 9, 8]
+insertFirst  [3, 5, 9, 8]
+removeFirst  [5, 9, 8]
+removeLast   [5, 9]
+first        [5]
+insertLast   [5, 7, 9]
+removeFirst  [7, 9]
+last         [9]
+removeLast   [7] 
+

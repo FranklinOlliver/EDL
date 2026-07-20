@@ -1,0 +1,114 @@
+Exercícios de Estrutura de Dados – Heap
+
+1) Desenhe uma Árvore binária completa (balanceada) que contenhas as seguintes chaves: {5, 6, 10, 11, 30, 28, 15, 9, 14, 13, 7, 8, 20, 19, 12, 23, 25} e que as mesmas sejam apresentadas nesta ordem considerando uma travessia pré-ordem e responda:
+    a) Esta árvore é um heap? Se não for, modifique-a para que seja.
+    b) Mostre os passos para a inserção de um item com a chave 16 neste heap e depois faça o desenho do novo heap.
+    c) Mostre os passos para a remoção do item com chave 15 deste heap.
+
+2. Indique se a frase a seguir é verdadeira ou falsa, justificando: “Em um heap implementado usando arrays, o elemento com a maior chave está no maior índice usado do array.”
+
+3. Sobre a figura abaixo:
+	      [3]
+      /     \
+   [8]       [18]
+  /   \     /
+[19] [15] [25]
+Desenhe o heap durante e após cada operação a seguir:
+    a) Inserção da chave 11
+    b) removeMin
+    c) removeMin
+    d) removeMin
+    e) Inserção da chave 31
+    f) Inserção da chave 1
+
+
+--------------------------------------- RESPOSTAs: ---------------------------------------
+1.                    [5]
+		                /     \
+                  /         \
+              [ 6 ]        [ 7 ]
+             /    \        /    \
+          [10]   [9]     [8]     [12]
+         /   \   /  \    / \     /  \
+       [11][15][14][13][20][19][23][25]
+       /  \
+     [30][28]
+     
+1. a) Não, a árvore atual não é um heap.
+		              5
+               /     \
+             6         7
+           /   \     /   \
+          9    13   8     12
+        /  \   / \ / \   /  \
+       10  15 14 11 20 19 23 25
+      /  \
+    30   28
+
+
+1. b) passo 1: Inserção Inicial
+                   5
+               /       \
+             6           7
+           /   \       /   \
+          9    13     8    12
+        /  \   / \   / \   / \
+      10   15 14 11 20 19 23 25
+     / \   /
+    30 28 16
+     
+    passo 2: Comparação e Ajuste: O nó 16 é comparado com o seu pai 15. Como 16 é maior que 15 (16 >= 15), a propriedade de Min-Heap já é respeitada e nenhuma troca é necessária.
+    
+1. c)              5
+               /       \
+             6          7
+           /   \       /  \
+          9    13     8    12
+        /  \   / \   / \   / \
+       10  16 14 11 20 19 23 25
+      /  \ 
+     30  28 
+
+Substituição pelo Último Elemento: Identificando o último nó do heap (o nó mais à direita do último nível), que é a chave 16. Substituímos o valor 15 por 16 e removemos a folha original onde o 16 estava. 
+Avaliação do Nó: O nó modificado agora contém o valor 16. É preciso verificar se a propriedade de Min-Heap foi violada. Olhando para cima: O pai de 16 é o 9 (16 ≥ 9, correto). Olhando para baixo: 16 não possui filhos (correto).
+
+
+2. FALSA, em um heap implementado usando arrays, o maior índice ocupado armazena apenas o último elemento inserido na árvore (o nó mais à direita do último nível), o que não garante qualquer relação com o valor da sua chave.
+
+
+3. a)   [3]		 	             [3]
+      /     \		 	         /     \
+   [8]      [18]	 	    [8]      [11]
+  /   \     /  \		   /   \     /  \
+[19] [15] [25] [11]		[19][15] [25] [18]
+
+3. b)    8
+      /    \
+     15     11
+    /  \   /
+   19  18 25
+   
+3. c)   11
+      /    \
+     15    25
+    /  \
+   19  18
+
+3. d)   15
+      /    \
+     18    25
+    /
+   19
+
+3. e)   15
+      /    \
+     18    25
+    /  \
+   19  31
+   
+3. f)   15		       15			      [1]
+      /    \		   /    \		     /   \
+     18    25		  18    [1]		 18     15
+    /  \   /		 /  \   /		  /  \   /
+   19  31 [1]		19  31 25		 19  31 25
+
